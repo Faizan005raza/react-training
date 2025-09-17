@@ -7,18 +7,18 @@ import CountryCard from "../CountryCard";
 const CountryList: React.FC = () => {
   const [search, setSearch] = useState("");
 
-  const filteredCountries = Countries.filter((country: { name: string; }) =>
+  const filteredCountries = Countries.filter((country: { name: string }) =>
     country.name.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
     <div style={{ padding: "20px" }}>
-      <h2 style={{ textAlign: "center" }}>Country List</h2>
+      <h2 style={{ textAlign: "center", color: "Black" }}>Country List</h2>
 
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
         <input
           type="text"
-          placeholder="Search country..."
+          placeholder="Search country name"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           style={{
@@ -27,6 +27,7 @@ const CountryList: React.FC = () => {
             fontSize: "16px",
             borderRadius: "4px",
             border: "1px solid #ccc",
+            textAlign: "center",
           }}
         />
       </div>
