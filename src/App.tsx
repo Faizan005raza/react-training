@@ -4,16 +4,31 @@ import ReverseString from "./components/reverse";
 import Home from "./components/home";
 import CountryList from "./components/CountryList";
 import Count from "./components/Count";
+import Props from "./components/Props";
+import MyComponent from "./components/CreateComponent";
+import Ans from "./components/Nesting";
+import HooksDemo from "./components/Hooks";
 
 function App() {
   return (
     <Router>
       <Header />
       <Routes>
-        <Route path="/reverse" element={<ReverseString />} />
         <Route path="/" element={<Home />} />
+        <Route path="/reverse" element={<ReverseString />} />
         <Route path="/CountryList" element={<CountryList />} />
         <Route path="/Count" element={<Count />} />
+        <Route
+          path="/Component"
+          element={
+            <>
+              <MyComponent />
+              <Props size="Biggest" />
+              <Ans />
+            </>
+          }
+        />
+        <Route path="/Hooks" element={<HooksDemo />} />
       </Routes>
     </Router>
   );

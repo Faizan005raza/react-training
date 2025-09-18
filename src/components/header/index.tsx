@@ -17,6 +17,8 @@ const pages = [
   { name: "Reverse", path: "/reverse" },
   { name: "Countries", path: "/CountryList" },
   { name: "Count", path: "/Count" },
+  { name: "Component", path: "/Component" },
+  { name: "Hooks", path: "/Hooks"}
 ];
 
 function Header() {
