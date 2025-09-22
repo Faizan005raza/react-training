@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-
-
 const ReverseString: React.FC = () => {
   const [text, setText] = useState(""); // Input text
   const [result, setResult] = useState(""); // Reversed output
@@ -35,9 +33,10 @@ const ReverseString: React.FC = () => {
         <br />
         <br />
         <button onClick={reverseString}>Reverse</button>
-        </div>
+      </div>
       <p>Output: {result}</p>
-      <p>Want to go to HomePage:-</p><a href="http://localhost:5173/home">HomePage</a>
+      <p>Want to go to HomePage:-</p>
+      <a href="http://localhost:5173/">HomePage</a>
     </>
   );
 };

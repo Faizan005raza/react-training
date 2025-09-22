@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";  // <-- Import Link here
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -18,12 +18,16 @@ const pages = [
   { name: "Countries", path: "/CountryList" },
   { name: "Count", path: "/Count" },
   { name: "Component", path: "/Component" },
-  { name: "Hooks", path: "/Hooks"}
+  { name: "Hooks", path: "/Hooks" },
 ];
 
 function Header() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
+    null
+  );
+  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
+    null
+  );
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -62,7 +66,6 @@ function Header() {
           >
             LOGO
           </Typography>
-
           {/* Mobile Menu Button */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -97,7 +100,6 @@ function Header() {
               ))}
             </Menu>
           </Box>
-
           {/* Mobile Logo */}
           <Typography
             variant="h5"
@@ -117,7 +119,6 @@ function Header() {
           >
             LOGO
           </Typography>
-
           {/* Desktop Menu Buttons */}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -131,7 +132,6 @@ function Header() {
               </Button>
             ))}
           </Box>
-
           {/* User Avatar */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

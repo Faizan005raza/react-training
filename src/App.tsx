@@ -8,29 +8,34 @@ import Props from "./components/Props";
 import MyComponent from "./components/CreateComponent";
 import Ans from "./components/Nesting";
 import HooksDemo from "./components/Hooks";
+import "./index.css";
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/reverse" element={<ReverseString />} />
-        <Route path="/CountryList" element={<CountryList />} />
-        <Route path="/Count" element={<Count />} />
-        <Route
-          path="/Component"
-          element={
-            <>
-              <MyComponent />
-              <Props size="Biggest" />
-              <Ans />
-            </>
-          }
-        />
-        <Route path="/Hooks" element={<HooksDemo />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Header />
+        <div className="global-padding">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/reverse" element={<ReverseString />} />
+            <Route path="/CountryList" element={<CountryList />} />
+            <Route path="/Count" element={<Count />} />
+            <Route
+              path="/Component"
+              element={
+                <>
+                  <MyComponent />
+                  <Props size="Biggest" />
+                  <Ans />
+                </>
+              }
+            />
+            <Route path="/Hooks" element={<HooksDemo />} />
+          </Routes>
+        </div>
+      </Router>
+    </>
   );
 }
 
