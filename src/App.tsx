@@ -8,7 +8,9 @@ import Props from "./components/Props";
 import MyComponent from "./components/CreateComponent";
 import Ans from "./components/Nesting";
 import HooksDemo from "./components/Hooks";
-import "./index.css";
+import LocalStorage from "./components/Local Storage";
+import Register from "./components/Registration";
+
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
               }
             />
             <Route path="/Hooks" element={<HooksDemo />} />
+            <Route path="/Local Storage" element={<LocalStorage />} />
+            <Route path="/Register" element={<Register />} />
           </Routes>
         </div>
       </Router>
