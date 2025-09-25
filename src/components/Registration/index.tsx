@@ -9,6 +9,7 @@ const Register = () => {
     confirmPassword: "",
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSubmit = (values: typeof initialValues, { setSubmitting }: any) => {
     setTimeout(() => {
       alert(JSON.stringify(values, null, 2));
@@ -48,15 +49,23 @@ const Register = () => {
 
               <div style={styles.fieldWrapper}>
                 <label>Confirm Password</label>
-                <Field type="password" name="confirmPassword" style={styles.input} />
+                <Field
+                  type="password"
+                  name="confirmPassword"
+                  style={styles.input}
+                />
                 <ErrorMessage
                   name="confirmPassword"
                   component="div"
-                //   style={styles.error}
+                  //   style={styles.error}
                 />
               </div>
 
-              <button type="submit" disabled={isSubmitting} style={styles.button}>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                style={styles.button}
+              >
                 Submit
               </button>
             </Form>
@@ -67,6 +76,7 @@ const Register = () => {
   );
 };
 
+// Inline styles (you can move these into a CSS file if you prefer)
 const styles: { [key: string]: React.CSSProperties } = {
   wrapper: {
     display: "flex",
@@ -76,7 +86,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     backgroundColor: "#f7f2f7ff",
   },
   container: {
-    backgroundColor: "#fafafaff",
+    backgroundColor: "#f0e9f0ff",
     padding: "2rem",
     borderRadius: "10px",
     boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
@@ -108,7 +118,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
   button: {
     padding: "0.75rem",
-    backgroundColor: "#3583d6ff",
+    backgroundColor: "#007bff",
     color: "#fff",
     border: "none",
     borderRadius: "5px",

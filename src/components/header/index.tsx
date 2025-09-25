@@ -19,8 +19,9 @@ const pages = [
   { name: "Count", path: "/Count" },
   { name: "Component", path: "/Component" },
   { name: "Hooks", path: "/Hooks" },
-  { name: "LocalStorage", path: "/Local Storage"},
-  { name: "Registration", path: "/Register"},
+  { name: "LocalStorage", path: "/Local Storage" },
+  { name: "Registration", path: "/Register" },
+  { name: "BasicForm", path: "/LoginPage" },
 ];
 
 function Header() {

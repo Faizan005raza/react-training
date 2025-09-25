@@ -10,6 +10,7 @@ import Ans from "./components/Nesting";
 import HooksDemo from "./components/Hooks";
 import LocalStorage from "./components/Local Storage";
 import Register from "./components/Registration";
+import BasicForm from "./components/LoginPage"
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             <Route path="/Hooks" element={<HooksDemo />} />
             <Route path="/Local Storage" element={<LocalStorage />} />
             <Route path="/Register" element={<Register />} />
+            <Route path="/LoginPage" element={<BasicForm />} />
           </Routes>
         </div>
       </Router>
