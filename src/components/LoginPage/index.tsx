@@ -1,6 +1,10 @@
 import { useFormik } from "formik";
+import { useState } from "react";
 import * as Yup from "yup";
-const BasicForm = () => {
+
+
+function BasicForm() {
+    const [submitted, setSubmitted] = useState(false);
   const validationSchema = Yup.object({
     firstname: Yup.string()
       .min(2, "Minimum 2 Characters Required")
@@ -31,14 +35,20 @@ const BasicForm = () => {
       validationSchema,
       onSubmit: (values) => {
         console.log("Registration Successful:", values);
+        setSubmitted(true);
+        resetForm();
+        setTimeout(()=> setSubmitted(false),2000);
       },
     });
 
   return (
     <form autoComplete="off" onSubmit={handleSubmit}>
+      <div>
+        <h1>Form</h1>
+      </div>
       <label htmlFor="firstname">First Name:</label>
       <input
-        name="firstname" // ✅ must be here
+        name="firstname"
         value={values.firstname}
         onChange={handleChange}
         onBlur={handleBlur}
@@ -53,7 +63,7 @@ const BasicForm = () => {
       <br />
       <label htmlFor="lastname">Last Name:</label>
       <input
-        name="lastname" // ✅ must be here
+        name="lastname"
         value={values.lastname}
         onChange={handleChange}
         onBlur={handleBlur}
@@ -68,7 +78,7 @@ const BasicForm = () => {
       <br />
       <label htmlFor="email">Email:</label>
       <input
-        name="email" // ✅ must be here
+        name="email"
         value={values.email}
         onChange={handleChange}
         onBlur={handleBlur}
@@ -83,7 +93,7 @@ const BasicForm = () => {
       <br />
       <label htmlFor="password">Password:</label>
       <input
-        name="password" // ✅ must be here
+        name="password"
         value={values.password}
         onChange={handleChange}
         onBlur={handleBlur}
@@ -98,7 +108,7 @@ const BasicForm = () => {
       <br />
       <label htmlFor="confirmpassword">Confirm Password:</label>
       <input
-        name="confirmpassword" // ✅ must be here
+        name="confirmpassword"
         value={values.confirmpassword}
         onChange={handleChange}
         onBlur={handleBlur}
@@ -112,8 +122,13 @@ const BasicForm = () => {
       <br />
       <br />
       <button type="submit">Submit</button>
+      {submitted && <div className="success">Form submitted successfully!</div>}
     </form>
   );
-};
+}
 
 export default BasicForm;
+function resetForm() {
+    throw new Error("Function not implemented.");
+}
+

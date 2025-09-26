@@ -6,3 +6,66 @@ background-color: blueviolet;
     padding: 4rem;
     color:black;
 }
+
+
+form {
+  max-width: 400px;
+  margin: 50px auto; /* Center form on screen */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  width: min-content;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+button {
+  width: min-content;
+  padding: 10px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.error,
+.email,
+.password,
+.confirmpassword {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.success {
+  color: green;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}

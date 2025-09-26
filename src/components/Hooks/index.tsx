@@ -26,7 +26,7 @@ function UseStateDemo() {
       </h1>
       <ol>
         <h1>
-          <li>State Hook</li>
+          1. State Hook
         </h1>
         <ul>
           <li>
@@ -227,9 +227,11 @@ function UseCallBack() {
         <li>Memoizing the function means caching the result of a function so that it does not need to be recalculated.</li>
       </ul>
       <h3>Implemented the concept:</h3>
-      <p>Count 1: {count1}</p>
-      <p>Count 2: {count2}</p>
+      <p>Count A: {count1}</p>
+      <p>Count B: {count2}</p>
       <Button onClick={handleClick1} text="Button 1" />
+      <br />
+      <br />
       <Button onClick={handleClick2} text="Button 2" />
     </div>
   );
